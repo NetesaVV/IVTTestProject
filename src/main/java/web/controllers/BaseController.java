@@ -37,10 +37,10 @@ public class BaseController {
         return "index";
     }
 
-    @RequestMapping(value = { "/ClientList" }, method = RequestMethod.GET)
+    @RequestMapping(value = { "/clientList" }, method = RequestMethod.GET)
     public String ClientList(Model model) {
 
-        model.addAttribute("Clients", clients);
+        model.addAttribute("clients", clients);
 
         return "ClientList";
     }
@@ -48,15 +48,15 @@ public class BaseController {
     @RequestMapping(value = { "/addClient" }, method = RequestMethod.GET)
     public String addClient(Model model) {
 
-        Client Client = new Client();
-        model.addAttribute("Client", Client);
+        Client client = new Client();
+        model.addAttribute("client", client);
 
         return "addClient";
     }
 
     @RequestMapping(value = { "/addClient" }, method = RequestMethod.POST)
     public String addClientSave(Model model, //
-                                @ModelAttribute("Client") Client Client) {
+                                @ModelAttribute("client") Client Client) {
 
         String login = Client.getLogin();
         String password = Client.getPassword();
@@ -70,7 +70,7 @@ public class BaseController {
             Client newClient = new Client(login, password, fullName, sex);
             clients.add(newClient);
 
-            return "redirect:/ClientList";
+            return "redirect:/clientList";
         }
         String error = "First Name & Last Name is required!";
         model.addAttribute("error", error);

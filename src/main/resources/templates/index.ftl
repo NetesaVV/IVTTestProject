@@ -16,7 +16,7 @@
       </#if>
 
 
-<a href="<@spring.url '/personList'/>">Person List</a>
+<a href="<@spring.url '/clientList'/>">Client List</a>
 
 </body>
 

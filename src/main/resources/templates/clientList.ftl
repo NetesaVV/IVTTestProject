@@ -15,8 +15,10 @@
 
     <table border="1">
         <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
+            <th>Login</th>
+            <th>Password</th>
+            <th>Full name</th>
+            <th>Sex</th>
         </tr>
             <#list clients as client>
             <tr>
