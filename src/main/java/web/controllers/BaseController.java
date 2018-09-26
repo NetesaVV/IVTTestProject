@@ -31,6 +31,7 @@ public class BaseController {
     @RequestMapping(value = { "/", "/index" }, method = RequestMethod.GET)
     public String index(Model model) {
 
+        //model.addAttribute("message", message);
         model.addAttribute("message", message);
 
         return "index";
@@ -72,7 +73,7 @@ public class BaseController {
             return "redirect:/ClientList";
         }
         String error = "First Name & Last Name is required!";
-        model.addAttribute("errorMessage", error);
+        model.addAttribute("error", error);
         return "addClient";
     }
 }
