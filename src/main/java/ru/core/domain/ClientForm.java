@@ -1,41 +1,22 @@
 package ru.core.domain;
 
-import lombok.Data;
-import javax.persistence.*;
-import java.io.Serializable;
-
-
-@Entity
-@Table
-@Data
-public class Client implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "clientSeq")
-    @SequenceGenerator(name="clientSeq", sequenceName = "CLIENTS_SEQ_ID", allocationSize = 1)
-    private Integer id;
-
-    @Column
+public class ClientForm {
     private String login;
 
-    @Column
     private String password;
 
-    @Column
     private String fullName;
 
-    @Column
     private Character sex;
 
-    /*public Client(String login, String password, String fullName, Character sex) {
+    public ClientForm(String login, String password, String fullName, Character sex) {
         this.login = login;
         this.password = password;
         this.fullName = fullName;
         this.sex = sex;
     }
 
-    public Client() {
-
-    }
+    public ClientForm(){}
 
     public String getLogin() {
 
@@ -68,5 +49,5 @@ public class Client implements Serializable {
 
     public void setSex(Character sex) {
         this.sex = sex;
-    }*/
+    }
 }

@@ -45,11 +45,11 @@
 <div>
     <fieldset>
         <legend>Add client</legend>
-        <form name="client" action="" method="POST">
-            Login:     <@spring.formInput "client.login" "" "text"/>    <br/>
-            Password:  <@spring.formInput "client.password" "" "text"/>    <br/>
-            Full name: <@spring.formInput "client.fullName" "" "text"/>    <br/>
-            Sex:       <@spring.formInput "client.sex" "" "text"/>    <br/>
+        <form name="clientForm" action="" method="POST">
+            Login:     <@spring.formInput "clientForm.login" "" "text"/>    <br/>
+            Password:  <@spring.formInput "clientForm.password" "" "text"/>    <br/>
+            Full name: <@spring.formInput "clientForm.fullName" "" "text"/>    <br/>
+            Sex:       <@spring.formInput "clientForm.sex" "" "text"/>    <br/>
             <br/>
             <input type="submit" class="btn" value="Create" />
         </form>

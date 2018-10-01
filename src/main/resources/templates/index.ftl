@@ -41,7 +41,7 @@
 <body>
 <h1>Welcome</h1>
       <#if message??>
-      <h1>${message}</h1>
+      <h2>${message}</h2>
       </#if>
 
 <div>
